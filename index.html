@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Редактор</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>   
+    <div class="alert alert-info">Редактирование изображений</div>
+    <div class="wrap">
+        <canvas class="canvas img"></canvas>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-outline-info" id="open">Открыть</button>
+        <hr>
+        <div class="input-group input-group-sm mb-3 mx-auto" style="width: 10vw;">
+                <div class="input-group-prepend">
+                <span class="input-group-text" >Радиус размытия</span>
+                </div>
+                <input type="number" value=6 min=1 id="blur_val" class="form-control">
+        </div>
+        <div class="btn-group" role="group" aria-label="Basic example">      
+            <button class="btn btn-secondary" id="g_blur">Размытие</button>
+            <!-- <label for="blur_val_m">m blur scale: </label> -->
+            <!-- <input class="para_input" type="number" value=1 min=0 id="blur_val_m" /> -->
+            <!-- <button class="button" id="m_blur">M Blur</button> -->
+            <button class="btn btn-secondary" id='blackandwhite'>Черно-белое</button>
+            <button class="btn btn-secondary" id='negative'>Негатив</button>
+            <button class="btn btn-outline-danger" id="recover">Сброс</button>
+        </div>
+        <hr>
+        <div class="btn-group" role="group" aria-label="Basic example">
+
+            <button class="btn btn-outline-info" id='downloadPNG'>Скачать в PNG</button>
+            <button class="btn btn-outline-info" id='downloadJPG'>Скачать в JPG</button>
+            <button class="btn btn-outline-info" id='downloadGIF'>Скачать в GIF</button>
+            
+        </div>
+    <div>
+    <script src='script.js'></script>
+</body>
+</html>
