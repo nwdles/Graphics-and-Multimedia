@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Потоковое видео</title>
+        <link rel="stylesheet" href="../Lab1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="alert alert-info text-center">Потоковое видео</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <video id="video">Потоковое видео не доступно...</video>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <select id="photo-filter" class="custom-select">
+                        <option value="none">Без фильтра</option>
+                        <option value="grayscale(100%)">Черно-белое</option>
+                        <option value="sepia(100%)">Сепия</option>
+                        <option value="invert(100%)">Инверсия</option>
+                        <option value="hue-rotate(90deg)">Оттенок</option>
+                        <option value="blur(10px)">Размытие</option>
+                        <option value="contrast(200%)">Констраст</option>
+                    </select>
+                    <button id="clear-button" class="btn btn-outline-info">
+                        Очистить
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
