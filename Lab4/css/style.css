@@ -11,3 +11,8 @@ body {
     margin-bottom: 5px;
     margin-top: 5px;
   }
+
+.custom-file-input:lang(en)~.custom-file-label::after {
+    content: 'Обзор';
+}
+

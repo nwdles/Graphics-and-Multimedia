@@ -7,10 +7,24 @@ let width = 500, // ширина изображения
 const video = document.getElementById('video');
 const clearButton = document.getElementById('clear-button');
 const photoFilter = document.getElementById('photo-filter');
+const startButton = document.getElementById('start-button');
+const uploadButton = document.getElementById('upload-button');
 
+uploadButton.addEventListener('change', function(e) {
+  video.srcObject = null;
+  video.src = null;
+
+  const path = (window.URL || window.webkitURL).createObjectURL(uploadButton.files[0]);
+
+  video.src = path;
+  video.play();
+});
+
+startButton.addEventListener('click', function(e) {
 // Получение медиапотока
 navigator.mediaDevices.getUserMedia({video: true, audio: false})
   .then(function(stream) {
+    video.src = null;
     //Направление потока в элемент <video>
     video.srcObject = stream;
     // Запуск видео
@@ -19,6 +33,7 @@ navigator.mediaDevices.getUserMedia({video: true, audio: false})
   .catch(function(err) {
     console.log(`Error: ${err}`);
   });
+});
 
   // Обработчик события момента воспроизведения видеопотока
   video.addEventListener('canplay', function(e) {
