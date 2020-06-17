@@ -5,3 +5,5 @@
 1. Алгоритм Canny [GPU]
 1. Создание 3D - сцены
 1. Обработка потокового видео / аудио
+### Результат:
+https://nwdles.github.io/Graphics-and-Multimedia/
